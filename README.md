@@ -232,6 +232,12 @@ Neste projeto, verificamos se você é capaz de:
 
   **Observações Importantes:**
 
+  - **Se atente ao utilizar o connect do redux em seus componentes**, os componentes Header, Table e WalletForm já constam com um export default diretamente na classe, porém para que o connect funcione você deverá mover o export para outra linha. Ex:
+  ```
+  // [...] definição do componente
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(Header)
+  ```
   - Devido a estrutura que o avaliador utiliza para realizar os testes, é necessário que o seu Redux esteja configurado, ou seja, a store e os reducers estejam criados e conectados.
 
   <br />
@@ -449,8 +455,17 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas e que tr
   - Adicione o atributo `data-testid="tag-input"`.
   - Este campo deve ser um dropdown. a pessoa usuária deve poder escolher entre os campos: 'Alimentação', 'Lazer', 'Trabalho', 'Transporte' e 'Saúde'.
 
-</details><br />
+</details>
 
+<details>
+  <summary><strong>Observações Importantes:</strong></summary><br />
+
+  Note que os campos `<select>` já iniciam com um valor selecionado no seu navegador, porém você também pode verificar por meio do `React dev Tools` que o estado do seu componente permanece o mesmo que foi definido inicialmente.
+
+  Isso pode causar um problema onde o usuário acredita que a opção já está selecionada, quando na verdade ela ainda não está, por esse motivo é importante refletir o mesmo valor inicial do `<select>` em seu estado no react e não deixar apenas uma string vazia.
+</details>
+
+<br />
 <details><summary> Ilustração do formulário</summary>
 
   ![image](./imgs/addItem.gif)
@@ -617,7 +632,7 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas e que tr
 <summary><strong>Observações técnicas</strong></summary><br />
 
   * Os testes criados por você não irão influenciar os outros requisitos no avaliador. Você deverá desenvolver seus testes unitários/integração usando a biblioteca React Testing Library, enquanto o avaliador usará a biblioteca [Cypress](https://docs.cypress.io/) para avaliar os requisitos, inclusive os de cobertura.
-  * Em caso de dúvidas leia a seção <a href="testes">Testes > Execução de teste de cobertura</a>.
+  * Em caso de dúvidas leia a seção <a href="#testes">Testes > Execução de teste de cobertura</a>.
 
 </details>
 
@@ -751,7 +766,7 @@ Crie uma página para gerenciar a carteira de gastos em diversas moedas e que tr
 <summary><strong>Observações técnicas</strong></summary><br />
 
   * Os testes criados por você não irão influenciar os outros requisitos no avaliador. Você deverá desenvolver seus testes unitários/integração usando a biblioteca React Testing Library, enquanto o avaliador usará a biblioteca [Cypress](https://docs.cypress.io/) para avaliar os requisitos, inclusive os de cobertura.
-  * Em caso de dúvidas leia a seção <a href="testes">Testes > Execução de teste de cobertura</a>.
+  * Em caso de dúvidas leia a seção <a href="#testes">Testes > Execução de teste de cobertura</a>.
 
 </details>
 
