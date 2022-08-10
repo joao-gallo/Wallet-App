@@ -1,6 +1,7 @@
 export const USER_ACT = 'USER_ACT';
 export const CURRENCIES_ACT = 'CURRENCIES_ACT';
 export const SAVE_CURR = 'SAVE_CURR';
+export const DELETE_ACT = 'DELETE_ACT';
 
 export const userActFunc = (email) => ({
   type: USER_ACT,
@@ -17,6 +18,11 @@ export const currenciesActFunc = (currencies) => ({
 export const saveCurrActFunc = (currencies) => ({
   type: SAVE_CURR,
   currencies,
+});
+
+export const deleteAct = (id) => ({
+  type: DELETE_ACT,
+  id,
 });
 
 export const currenciesAsync = () => async (dispatch) => {
