@@ -1,7 +1,7 @@
 <h1 align="center">Olá 👋, Me chamo João"</h1>
 <h3 align="center">Sou recém formado Desenvolvedor Front End</h3>
 
-- utilizei nesse projeto **React, Redux, CSS e Testes Unitários.**
+- Utilizei nesse projeto **React, Redux, CSS e Testes Unitários.**
 
 - Estou atualmente trabalhando nesse **app de carteira virtual**
 
