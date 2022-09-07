@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import '../index.css';
 
 import { deleteAct } from '../redux/actions';
 
@@ -14,12 +15,12 @@ class Table extends Component {
     const { expenses } = this.props;
     return (
       <div>
-        <table border="1" bgcolor="cyan">
+        <table className="tables" border="1px">
           <thead>
             <tr>
+              <th>Método de pagamento</th>
               <th>Descrição</th>
               <th>Tag</th>
-              <th>Método de pagamento</th>
               <th>Valor</th>
               <th>Moeda</th>
               <th>Câmbio utilizado</th>
@@ -36,15 +37,20 @@ class Table extends Component {
               );
               return (
                 <tr key={ expense.id }>
-                  <td>{expense.description}</td>
-                  <td>{expense.tag}</td>
-                  <td>{expense.method}</td>
-                  <td>{Number(expense.value).toFixed(2)}</td>
-                  <td>{expense.exchangeRates[expense.currency].name}</td>
-                  <td>{exchange.toFixed(2)}</td>
-                  <td>{result.toFixed(2)}</td>
-                  <td>Real</td>
-                  <td>
+                  <td className="align">{expense.description}</td>
+                  <td className="align">{expense.tag}</td>
+                  <td className="align">{expense.method}</td>
+                  <td className="align">{Number(expense.value).toFixed(2)}</td>
+                  <td
+                    className="align"
+                  >
+                    {expense.exchangeRates[expense.currency].name}
+
+                  </td>
+                  <td className="align">{exchange.toFixed(2)}</td>
+                  <td className="align">{result.toFixed(2)}</td>
+                  <td className="align">Real</td>
+                  <td className="align">
                     <button
                       type="button"
                       data-testid="delete-btn"

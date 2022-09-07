@@ -42,38 +42,40 @@ class Login extends React.Component {
     const { dataSave, history } = this.props;
 
     return (
-      <>
-        <label htmlFor="email">
-          Email:
-          <input
-            type="email"
-            id="email"
-            data-testid="email-input"
-            value={ email }
-            onChange={ this.handleChange }
-          />
-        </label>
-        <label htmlFor="password">
-          Senha:
-          <input
-            type="text"
-            id="password"
-            data-testid="password-input"
-            value={ password }
-            onChange={ this.handleChange }
-          />
-        </label>
-        <button
-          type="button"
-          disabled={ isDisabled }
-          onClick={ () => {
-            dataSave(email);
-            history.push('/carteira');
-          } }
-        >
-          Entrar
-        </button>
-      </>
+      <div className="login">
+        <div className="container">
+          <label htmlFor="email">
+            Email:
+            <input
+              type="email"
+              id="email"
+              data-testid="email-input"
+              value={ email }
+              onChange={ this.handleChange }
+            />
+          </label>
+          <label htmlFor="password">
+            Senha:
+            <input
+              type="text"
+              id="password"
+              data-testid="password-input"
+              value={ password }
+              onChange={ this.handleChange }
+            />
+          </label>
+          <button
+            type="button"
+            disabled={ isDisabled }
+            onClick={ () => {
+              dataSave(email);
+              history.push('/carteira');
+            } }
+          >
+            Entrar
+          </button>
+        </div>
+      </div>
     );
   }
 }
