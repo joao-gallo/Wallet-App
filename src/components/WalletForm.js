@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import '../index.css';
 
 import { currenciesAsync, saveCurrAsync } from '../redux/actions';
 
@@ -52,7 +53,7 @@ class WalletForm extends Component {
     const { value, description, currency, method, tag } = this.state;
 
     return (
-      <>
+      <div>
         <label htmlFor="value">
           Valor:
           <input
@@ -108,7 +109,7 @@ class WalletForm extends Component {
           <option>Saúde</option>
         </select>
         <button type="button" onClick={ this.saveExpense }>Adicionar despesa</button>
-      </>
+      </div>
     );
   }
 }
