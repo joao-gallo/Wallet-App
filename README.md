@@ -1,9 +1,14 @@
-<h1 align="center">Olá 👋, Me chamo João</h1>
-<h3 align="center">Sou recém formado Desenvolvedor Front End</h3>
+<h1 align="center">Hello 👋, I'm Joao </h1>
+<h3 align="center">I'm a Full Stack Developer, with passion for technology.</h3>
 
-- Utilizei nesse projeto **React, Redux, CSS e Testes Unitários.**
+- I made use of **React, Redux, CSS and Unit Tests com RTL.**
 
-- Estou atualmente trabalhando nesse **app de carteira virtual**
+- In this project, which I made all by myself, the user need to Log In with Email and
+Password, then add an expense to the list with description, amount, payment method
+and currency used. The expense will be saved in user's local storage.
+I used a quote API to perform currency exchange search. I also used Redux for
+managing the global state of the application.
+ 
 
 - Feedbacks: **joaogallop@gmail.com**
 
