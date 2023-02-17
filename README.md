@@ -3,7 +3,7 @@
 
 - I made use of **React, Redux, CSS and Unit Tests with RTL.**
 
-- In this project, which I made all by myself, the user need to Log In with Email and
+- In this project, the user need to Log In with Email and
 Password, then add an expense to the list with description, amount, payment method
 and currency used. The expense will be saved in user's local storage.
 I used a quote API to perform currency exchange search. I also used Redux for
