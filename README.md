@@ -1,7 +1,7 @@
 <h1 align="center">Hello 👋, I'm Joao </h1>
 <h3 align="center">I'm a Full Stack Developer, with passion for technology.</h3>
 
-- I made use of **React, Redux, CSS and Unit Tests com RTL.**
+- I made use of **React, Redux, CSS and Unit Tests with RTL.**
 
 - In this project, which I made all by myself, the user need to Log In with Email and
 Password, then add an expense to the list with description, amount, payment method
